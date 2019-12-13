@@ -10,6 +10,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+
+	"quet/routers"
 )
 
 func main() {
@@ -30,6 +32,8 @@ func main() {
 			return
 		}
 	}()
+
+	routers.SetRouter(router)
 
 	ch := make(chan os.Signal)
 	signal.Notify(ch, syscall.SIGQUIT, syscall.SIGINT, syscall.SIGTERM)
