@@ -16,6 +16,8 @@ import (
 
 func main() {
 	router := gin.New()
+	router.HandleMethodNotAllowed = true
+	router.Use(gin.Recovery())
 
 	s := &http.Server{
 		Addr:         ":10000",
