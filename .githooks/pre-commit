@@ -18,7 +18,7 @@ do
     *.go )
       gofmt -s -w $FILE
       goimports -w $FILE
-      golangci -w $FILE
+      golangci-lint -w $FILE
       git add $FILE
       echo goimports $FILE
       ;;
