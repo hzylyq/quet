@@ -13,3 +13,7 @@ func SetRouter(router *gin.Engine) {
 func GoPool(c *gin.Context) {
 	log.Printf("this is method")
 }
+
+func GoLinter(c *gin.Context) {
+
+}
